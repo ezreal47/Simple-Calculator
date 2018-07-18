@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="calculator.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div id="app">
+    <div class="calculator">
+      <div class="calc-display">{{display}}</div>
+      <section class="calc-fun">
+        <button @click="reset">C</button>
+        <button @click="load">L</button>
+        <button @click="setNumber('.')">.</button>
+        <button @click="setDisplay">=</button>
+      </section>
+      <div class="calc">
+        <section class="calc-number">
+          <button @click="setNumber('1')">1</button>
+          <button @click="setNumber('2')">2</button>
+          <button @click="setNumber('3')">3</button>
+          <button @click="setNumber('4')">4</button>
+          <button @click="setNumber('5')">5</button>  
+          <button @click="setNumber('6')">6</button>
+          <button @click="setNumber('7')">7</button>
+          <button @click="setNumber('8')">8</button>
+          <button @click="setNumber('9')">9</button>
+          <button @click="setNumber('0')">0</button>
+        </section>
+        <section class="calc-oper">
+          <button @click="setOperator('+')">+</button>
+          <button @click="setOperator('-')">-</button>
+          <button @click="setOperator('*')">*</button>
+          <button @click="setOperator('/')">/</button>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="calc.js"></script>
+</body>
+</html>

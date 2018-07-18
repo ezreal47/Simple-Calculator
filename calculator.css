@@ -1,0 +1,115 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+@keyframes calc {
+  to {
+    transform: none; } }
+@keyframes fall-a {
+  from {
+    transform: translateZ(40em) rotate3d(-1, 0, 0, 1turn);
+    opacity: 0; } }
+@keyframes fall-b {
+  from {
+    transform: translate3d(2em, 2em, 40em) rotate3d(1, 0, -1, 1turn);
+    opacity: 0; } }
+@keyframes fall-c {
+  from {
+    transform: translateZ(40em) rotate3d(1, 1, 1, 1turn);
+    opacity: 0; } }
+@keyframes hide-display {
+  to {
+    opacity: 1; } }
+button {
+  animation: fall-a 2.5s ease-out backwards; }
+
+button:nth-child(3n+1) {
+  animation-name: fall-b; }
+
+button:nth-child(3n+2) {
+  animation-name: fall-c; }
+
+button:nth-child(5n) {
+  animation-delay: .25s; }
+
+button:nth-child(5n+1) {
+  animation-delay: .1s; }
+
+button:nth-child(5n+2) {
+  animation-delay: .5s; }
+
+button:nth-child(5n+3) {
+  animation-delay: .35s; }
+
+button:nth-child(5n+4) {
+  animation-delay: .7s; }
+
+#app {
+  background: #ff6e7f;
+  background: linear-gradient(to bottom left, #ff6e7f, #bfe9ff);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.calculator {
+  width: 320px;
+  height: 480px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(40deg) rotate(-30deg);
+  animation: calc 3s 1.5s ease both; }
+  .calculator button {
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    color: #5cc8ff;
+    background: #404040;
+    cursor: pointer;
+    border: none; }
+  .calculator .calc-display {
+    height: 80px;
+    line-height: 80px;
+    text-align: right;
+    font-size: 24px;
+    color: #d63c6b;
+    color: #ffbcc5;
+    padding: 0 20px;
+    border-bottom: 2px solid #ff6e7f;
+    background: #404040;
+    opacity: 0;
+    animation: hide-display 1s 3s both; }
+  .calculator .calc {
+    display: flex; }
+  .calculator .calc-fun {
+    display: flex; }
+    .calculator .calc-fun button {
+      width: 25%;
+      height: 80px;
+      color: #ffbcc5; }
+  .calculator .calc-number {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap; }
+    .calculator .calc-number button {
+      width: 33.3%;
+      height: 80px;
+      flex-grow: 1;
+      color: white;
+      transition: all 0.4s; }
+      .calculator .calc-number button:hover {
+        color: #ff6e7f; }
+  .calculator .calc-oper {
+    display: flex;
+    flex-direction: column;
+    width: 25%; }
+    .calculator .calc-oper button {
+      color: #ffbcc5;
+      width: 100%;
+      height: 80px; }
+
+/*# sourceMappingURL=calculator.css.map */
