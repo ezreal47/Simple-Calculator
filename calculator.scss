@@ -71,6 +71,8 @@ button:nth-child(5n+4){ animation-delay:.7s; }
     background: #404040;
     opacity: 0;
     animation: hide-display 1s 3s both;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .calc {
     display: flex;

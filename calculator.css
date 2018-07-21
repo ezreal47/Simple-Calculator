@@ -82,7 +82,9 @@ button:nth-child(5n+4) {
     border-bottom: 2px solid #ff6e7f;
     background: #404040;
     opacity: 0;
-    animation: hide-display 1s 3s both; }
+    animation: hide-display 1s 3s both;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   .calculator .calc {
     display: flex; }
   .calculator .calc-fun {
